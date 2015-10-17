@@ -49,12 +49,7 @@ class NewTransactionForm extends React.Component {
           }
         });
 
-      } else {
-            render(){
-
-                return <div>jkjhkjhkjh</div>;
-            }
-        }
+      }
     }
 
 
