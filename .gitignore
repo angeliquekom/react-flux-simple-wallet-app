@@ -1,0 +1,7 @@
+# Add some dirs
+node_modules/
+dist/
+
+# Add some files
+*~ 
+*.idea
