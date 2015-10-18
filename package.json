@@ -5,7 +5,6 @@
   "main": "app.js",
   "dependencies": {
     "babelify": "~6.3.0",
-    "bootstrap": "~3.3.5",
     "browserify": "~11.2.0",
     "events": "~1.1.0",
     "flux": "~2.1.1",
@@ -15,7 +14,8 @@
     "react": "~0.14.0",
     "run-sequence": "~1.1.4",
     "lodash": "~3.10.1",
-    "vinyl-source-stream": "~1.1.0"
+    "vinyl-source-stream": "~1.1.0",
+    "moment": "~2.10.6"
   },
   "devDependencies": {},
   "scripts": {

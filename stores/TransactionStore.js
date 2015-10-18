@@ -1,13 +1,14 @@
 // TransactionStore.js
 import {EventEmitter} from 'events';
 import _ from 'lodash';
+var moment = require('moment');
 
 let TransactionStore = _.extend({}, EventEmitter.prototype, {
 
   // Mock default data
   transactions: [
     {
-      date: '01/01/2015',
+      date:moment().format('llll'),
       transaction_amount: 0,
       transaction_type:'none',
       total_amount: 0,

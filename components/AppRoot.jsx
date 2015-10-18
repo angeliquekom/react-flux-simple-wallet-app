@@ -37,16 +37,26 @@ class AppRoot extends React.Component {
 
     let transactionTable = transactions.map(( transactionItem ) => {
 
-      return <tr>
+        return <tr>
                 <td>  { transactionItem.id } </td>
                 <td>  { transactionItem.date } </td>
-                <td>  { transactionItem.transaction_amount } </td>
+                <td>  { transactionItem.transaction_amount } &pound; </td>
                 <td>  { transactionItem.transaction_type } </td>
-                <td>  { transactionItem.total_amount } </td>
+                <td>  { transactionItem.total_amount } &pound;</td>
 
              </tr>;
 
     });
+
+    var error_message = '';
+    var error_flag = '';
+
+    if (last_transaction.transaction_type == 'Error'){
+        error_flag = 'alert alert-warning';
+        error_message = 'You cannot display negative balance. Please try again.'
+    } else {
+        error_message = ''
+    }
 
 
     return <div className="container">
@@ -61,27 +71,31 @@ class AppRoot extends React.Component {
                                 <h2>Balance </h2>
                                 <span className="currency">{ last_transaction.total_amount } &pound;</span>
                             </div>
+                            <h2>Make Transaction </h2>
                             <NewTransactionForm />
+                            <br/>
+                            <div className={error_flag}>{error_message}</div>
                         </div>
                     </div>
-                </div>
 
-                <div className="row">
-                    <div className="col-lg-12">
-                        <table className="table table-responsive">
-                            <thead>
-                                <tr>
-                                    <td> # </td>
-                                    <td> Date </td>
-                                    <td> Transaction Amount </td>
-                                    <td> Transaction Type </td>
-                                    <td> Final Amount </td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                { transactionTable }
-                            </tbody>
-                        </table>
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <h2>History</h2>
+                            <table className="table table-responsive">
+                                <thead>
+                                    <tr>
+                                        <td> # </td>
+                                        <td> Date </td>
+                                        <td> Transaction Amount </td>
+                                        <td> Transaction Type </td>
+                                        <td> Final Amount </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    { transactionTable }
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
            </div>;

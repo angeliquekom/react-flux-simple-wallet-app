@@ -10,8 +10,7 @@ body{
 }
 
 .align-middle {
-  padding-top: 15%;
-  padding-bottom: 25%;
+  padding-top: 10%;
 }
 
 h2{
@@ -26,15 +25,3 @@ h2{
 thead{
     font-weight:700;
 }
-
-/*.wallet-icon{
-    background-image: url("../img/wallet_512.png");
-    background-repeat: no-repeat;
-
-}
-
-@media screen and (max-width: 480px) {
-        .wallet-icon {
-            background-image: url("../img/wallet_128.png");
-        }
-}*/
