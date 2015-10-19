@@ -8,10 +8,11 @@ var Header = React.createClass({
             <nav className="navbar navbar-default navbar-fixed-top">
               <div className="container">
                 <div className="navbar-header">
-                  <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                  </button>
                   <a className="navbar-brand">
                         Wallet
+                  </a>
+                  <a href="https://github.com/angeliquekom/react-flux-simple-wallet-app" className="navbar-brand" target="_blank">
+                        Source code
                   </a>
                 </div>
               </div>

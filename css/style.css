@@ -25,3 +25,15 @@ h2{
 thead{
     font-weight:700;
 }
+
+a{
+    color:white;
+}
+
+@media screen and (max-device-width: 480px){
+  table {
+    padding:20px;
+  }
+
+
+}
